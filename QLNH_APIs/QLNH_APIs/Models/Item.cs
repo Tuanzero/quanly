@@ -12,7 +12,6 @@ namespace QLNH_APIs.Models
         public double Giamgia { get; set; }
         public String NgayTao { get; set; }
         public String NgayCapNhat { get; set; }
-        public bool Xoa { get; set; }
         public virtual LoaiMonan LoaiMonan { get; set; }
         public virtual Donvi Donvi { get; set; }
         public virtual IList<HinhMonan> HinhMonan { get; set; }

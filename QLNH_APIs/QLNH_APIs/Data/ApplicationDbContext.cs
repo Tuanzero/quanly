@@ -23,6 +23,7 @@ namespace QLNH_APIs.Data
         public DbSet<OrderItem> OrderItem { get; set; }
         public DbSet<TrangThai> TrangThai { get; set; }
         public DbSet<VaiTro> VaiTro { get; set; }
+        public DbSet<NhaHang> NhaHang { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

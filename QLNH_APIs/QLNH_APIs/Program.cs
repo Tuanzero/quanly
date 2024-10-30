@@ -7,6 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("QuanLy", builder =>
+    {
+        builder.WithOrigins("http://localhost:4200") // Dia chi cho phep
+               .AllowAnyMethod() // Cho phep tat ca cac phuong thuc
+               .AllowAnyHeader(); // Cho phep tat ca cac tieu de
+    });
+});
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("QUANLY")));
 
@@ -24,6 +34,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("QuanLy");
 
 app.UseAuthorization();
 

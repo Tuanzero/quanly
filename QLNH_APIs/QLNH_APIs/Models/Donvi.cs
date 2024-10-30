@@ -10,7 +10,6 @@ namespace QLNH_APIs.Models
         public string Mota { get; set; }
         public String NgayTao { get; set; }
         public String NgayCapNhat { get; set; }
-        public bool Xoa { get; set; }
         public Loaidonvi Loaidonvi { get; set; }
     }
 }

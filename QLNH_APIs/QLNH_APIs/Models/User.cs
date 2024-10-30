@@ -11,7 +11,6 @@ namespace QLNH_APIs.Models
         public string Password { get; set; }
         public String NgayTao { get; set; }
         public String NgayCapNhat { get; set; }
-        public bool Xoa { get; set; }
         public bool OffDuty { get; set; }
         public virtual VaiTro Vaitro { get; set; }
     }

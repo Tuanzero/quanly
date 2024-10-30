@@ -2,14 +2,13 @@
 
 namespace QLNH_APIs.Models
 {
-    public class Ban
+    public class NhaHang
     {
         [Key]
-        public int BanId { get; set; }
+        public int NhaHangId { get; set; }
         public String NgayTao { get; set; }
         public String NgayCapNhat { get; set; }
-        public virtual TrangThai Trangthai { get; set; }
-        public virtual KhachHang Khachhang { get; set; }
-
+        public String Sodienthoai  { get; set; }
+        public String Diachi  { get; set; }
     }
 }
